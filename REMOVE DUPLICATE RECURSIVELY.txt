@@ -1,0 +1,17 @@
+# Problem ID 91, removeConsecutiveDuplicates
+def removeConsecutiveDuplicates(string):
+    l=len(string)
+    if l==0 or l==1:
+        return string 
+    str=string[1:]
+    output=removeConsecutiveDuplicates(str)
+    if string[0]==string[1]:
+        return output 
+    else:
+        return string[0]+output 
+    
+    pass
+
+# Main
+string = input().strip()
+print(removeConsecutiveDuplicates(string))
