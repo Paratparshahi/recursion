@@ -1,0 +1,16 @@
+def powerofnum(a,b):
+    if b==0:
+        
+        return 1
+    return a*powerofnum(a,b-1)
+
+    
+
+
+
+
+
+a, b = input().split()
+a = int(a)
+b = int(b)
+print(powerofnum(a,b))
