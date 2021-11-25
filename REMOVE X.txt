@@ -1,0 +1,15 @@
+def removeX(string): 
+    i=len(string)
+    if i==0:
+        return string 
+    
+    smalloutput=removeX(string[1:])
+    if string[0]=='x':
+        return smalloutput 
+    else :
+        return string[0]+smalloutput
+        
+
+# Main
+string = input()
+print(removeX(string))
